@@ -24,3 +24,14 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Accordion collapse/expand animation */
+.accordion-grid {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease-in-out;
+}
+
+.accordion-grid[data-state="open"] {
+  grid-template-rows: 1fr;
+}

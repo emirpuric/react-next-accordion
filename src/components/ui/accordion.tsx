@@ -152,8 +152,8 @@ export function AccordionContent({ children, className }: AccordionContentProps)
       id={contentId}
       role="region"
       aria-labelledby={triggerId}
-      className="grid transition-[grid-template-rows] duration-300 ease-in-out"
-      style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
+      data-state={isOpen ? "open" : "closed"}
+      className="accordion-grid"
     >
       <div className="overflow-hidden">
         <div className={className}>{children}</div>
